@@ -1092,7 +1092,7 @@ module.exports = grammar({
         optional($._end_line),
         $._nl,
         alias(repeat(seq(repeat(/[^\n]/), $._nl)), $.comment),
-        alias(/\s+erem/, $.control_mnemonic),
+        alias(/\s+erem/i, $.control_mnemonic),
         optional($._end_line)
       ),
 
